@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>子组件更新父组件传参数据，DOM不更新解决小技巧（数组类型数据） | 我的博客</title>
+    <meta name="description" content="Joker的个人博客">
+    <link rel="icon" href="./public/favicon.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.9d53ebe0.css" as="style"><link rel="preload" href="/assets/js/app.b10a044a.js" as="script"><link rel="preload" href="/assets/js/5.b2a8cc73.js" as="script"><link rel="prefetch" href="/assets/js/10.c70ec03f.js"><link rel="prefetch" href="/assets/js/11.5522bb05.js"><link rel="prefetch" href="/assets/js/12.ce1e94ad.js"><link rel="prefetch" href="/assets/js/2.43caf414.js"><link rel="prefetch" href="/assets/js/3.829947fd.js"><link rel="prefetch" href="/assets/js/4.0f14b318.js"><link rel="prefetch" href="/assets/js/6.0a04832b.js"><link rel="prefetch" href="/assets/js/7.d1f387ef.js"><link rel="prefetch" href="/assets/js/8.990ee2a9.js"><link rel="prefetch" href="/assets/js/9.7a813323.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9d53ebe0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">我的博客</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">基础</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/basics/html/html.html" class="nav-link">html</a></li><li class="dropdown-item"><!----> <a href="/basics/css/" class="nav-link">css</a></li><li class="dropdown-item"><!----> <a href="/basics/js/" class="nav-link">js</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">进阶</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>react</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/advanced/react/taro/" class="nav-link">taro</a></li></ul></li><li class="dropdown-item"><h4>vue</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/advanced/vue/skill/skill.html" class="nav-link router-link-exact-active router-link-active">技巧</a></li><li class="dropdown-subitem"><a href="/advanced/vue/vue-cli/" class="nav-link">vue-cli</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">基础</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/basics/html/html.html" class="nav-link">html</a></li><li class="dropdown-item"><!----> <a href="/basics/css/" class="nav-link">css</a></li><li class="dropdown-item"><!----> <a href="/basics/js/" class="nav-link">js</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">进阶</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>react</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/advanced/react/taro/" class="nav-link">taro</a></li></ul></li><li class="dropdown-item"><h4>vue</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/advanced/vue/skill/skill.html" class="nav-link router-link-exact-active router-link-active">技巧</a></li><li class="dropdown-subitem"><a href="/advanced/vue/vue-cli/" class="nav-link">vue-cli</a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>关于vue的小技巧</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/advanced/vue/skill/skill.html" class="active sidebar-link">子组件更新父组件传参数据，DOM不更新解决小技巧（数组类型数据）</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/advanced/vue/skill/skill.html#vue父组件向子组件传参，子组件更改该数据，dom不更新，解决小技巧-一般传参为数组会有dom不更新情况" class="sidebar-link">vue父组件向子组件传参，子组件更改该数据，DOM不更新，解决小技巧(一般传参为数组会有DOM不更新情况)</a></li></ul></li><li><a href="/advanced/vue/skill/skill2.html" class="sidebar-link">父组件无法向动态组件直接通过this.$refs获取子组件内部的节点的解决方法</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="子组件更新父组件传参数据，dom不更新解决小技巧（数组类型数据）"><a href="#子组件更新父组件传参数据，dom不更新解决小技巧（数组类型数据）" aria-hidden="true" class="header-anchor">#</a> 子组件更新父组件传参数据，DOM不更新解决小技巧（数组类型数据）</h1> <div class="warning custom-block"><p class="custom-block-title">WARNING</p> <p>该方法适用于vue2</p></div> <h2 id="vue父组件向子组件传参，子组件更改该数据，dom不更新，解决小技巧-一般传参为数组会有dom不更新情况"><a href="#vue父组件向子组件传参，子组件更改该数据，dom不更新，解决小技巧-一般传参为数组会有dom不更新情况" aria-hidden="true" class="header-anchor">#</a> vue父组件向子组件传参，子组件更改该数据，DOM不更新，解决小技巧(一般传参为数组会有DOM不更新情况)</h2> <div class="language- extra-class"><pre class="language-text"><code>// fatherData数据如下
+
+fatherData: [
+  {
+    icon: {
+      type: `${iconType}-home`,
+    },
+    name: '主页',
+    iconImg: {
+      // default: this.imgUrl + 'ichengdu/home.png',
+      // selected: this.imgUrl + 'ichengdu/home-fill.png'
+    }
+  },
+  {
+    icon: {
+      type: `${iconType}-briefcase`,
+    },
+    name: '商城',
+    iconImg: {
+      // default: this.imgUrl + 'ichengdu/shop.png',
+      // selected: this.imgUrl + 'ichengdu/shop-fill.png'
+    }
+  },
+  {
+    icon: {
+      type: `${iconType}-contact`,
+    },
+    name: '我的',
+    iconImg: {
+      default: '',
+      selected: ''
+    }
+  }
+]
+
+// 子组件接受的参数
+
+prop: [
+  'fatherData'
+]
+</code></pre></div><p>-子组件的data内新建一个变量data，如下</p> <div class="language- extra-class"><pre class="language-text"><code>// 子组件data
+data () {
+  return {
+    data: []
+  }
+}
+</code></pre></div><p>-在子组件created该生命周期阶段，用data接受父组件传来的并修改的数据</p> <div class="language- extra-class"><pre class="language-text"><code>// 处理父组件传来的参数
+
+this.fatherData.forEach(
+  (item, i) =&gt; {
+    item.icon.size = this.iconSize
+    item.flag = false
+    if (i === 0) {
+      item.flag = true
+    }
+    this.data.push(item)
+  }
+)
+</code></pre></div><p>-需要改变flag值并让DOM更新</p> <div class="language- extra-class"><pre class="language-text"><code>// change函数接受索引并改变该索引对应的flag值，并更新DOM
+// 先清空data内部数据
+// 再赋值给data，即可触发DOM更新
+
+change (i) {
+  this.data = []
+  this.tabBarData.forEach(
+    (_item, _i) =&gt; {
+      _item.flag = false
+      if (i === _i) {
+        _item.flag = true
+      }
+      this.data.push(_item)
+    }
+  )
+}
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/advanced/vue/skill/skill2.html">
+          父组件无法向动态组件直接通过this.$refs获取子组件内部的节点的解决方法
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/app.b10a044a.js" defer></script><script src="/assets/js/5.b2a8cc73.js" defer></script>
+  </body>
+</html>
